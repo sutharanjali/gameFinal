@@ -1,4 +1,4 @@
-class playerTwp {
+class PlayerTwp {
   constructor() {
     this.x = xPosP1; //x position
     this.y = yPosP2; //y position

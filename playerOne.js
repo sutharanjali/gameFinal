@@ -1,4 +1,4 @@
-class playerOne {
+class PlayerOne {
   constructor() {
     this.x = xPosP1; //x position
     this.y = yPosP2; //y position
