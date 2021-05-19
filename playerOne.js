@@ -1,7 +1,7 @@
 class PlayerOne {
   constructor() {
     this.x = xPosP1; //x position
-    this.y = yPosP2; //y position
+    this.y = yPosP1; //y position
     this.d = diamP1; //diameter
     this.speed = 5;
     this.direction = "still";
@@ -17,24 +17,22 @@ class PlayerOne {
         //dont move
         break;
       case "left":
-        //left bounds
-        if (this.x - (this.d / 2) <= 0) {
+        //go left
+        if (this.x - (this.d / 2) <= 0) { //left bounds
           this.x = (this.d / 2) + 5;
         }
-        //go left
+
         this.x -= this.speed;
         break;
       case "right":
-        //right bounds
-        if (this.x + (this.d / 2) >= width / 2) {
+        //go right
+        if (this.x + (this.d / 2) >= width / 2) { //right bounds
           this.x = width / 2 - (this.d / 2) - 5;
         }
-        //go right
         this.x += this.speed;
         break;
       default:
         break;
-
     }
   }
 }

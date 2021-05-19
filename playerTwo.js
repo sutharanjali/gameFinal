@@ -1,8 +1,8 @@
-class PlayerTwp {
+class PlayerTwo {
   constructor() {
-    this.x = xPosP1; //x position
-    this.y = yPosP2; //y position
-    this.d = diamP1; //diameter
+    this.x = xPosP2;
+    this.y = yPosP2;
+    this.d = diamP2;
     this.speed = 5;
     this.direction = "still";
   }
@@ -17,24 +17,23 @@ class PlayerTwp {
         //dont move
         break;
       case "left":
-        //left bounds
-        if (this.x - (this.d / 2) <= width / 2) {
+        //go left
+        if (this.x - (this.d / 2) <= width / 2) { //right bounds
           this.x = width / 2 + (this.d / 2) + 5;
         }
-        //go left
         this.x -= this.speed;
         break;
+
       case "right":
-        //right bounds
-        if (this.x + (this.d / 2) >= width) {
+        //go right
+        if (this.x + (this.d / 2) >= width) { //left bounds
           this.x = width - (this.d / 2) - 5;
         }
-        //go right
+
         this.x += this.speed;
         break;
       default:
         break;
-
     }
   }
 }

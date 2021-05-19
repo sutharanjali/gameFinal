@@ -6,11 +6,7 @@ class CoinsP1 {
   }
 
   display() {
-    // fill('red');
-    // noStroke();
-    // ellipse(this.x, this.y, this.d);
     image(coinImg, this.x, this.y, this.d, this.d);
-
   }
 
   move() {
