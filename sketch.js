@@ -97,7 +97,6 @@ function draw() {
       break;
     case "gameInfoPage3":
       gameInfoPage3();
-      cnv.mouseClicked(gameInfoPage3MouseClicked);
       break;
 
   }
@@ -581,10 +580,14 @@ function gameInfoPage3() {
   fill(txt);
   text("Resources on White Privilege", width / 2, 387);
 
-  //when clicked, return to main level
+  //press 'r' to return to main level
   textSize(15);
   fill("white");
-  text("Click to restart game.", width / 2, 450);
+  text("Press 'r' to restart game.", width / 2, 450);
+  
+  if (key == 'r') {
+    state = 'levelOne';
+  }
 
   //allows link to open in new window when clicked inside rectangle area
   function mousePressed() {
@@ -604,9 +607,4 @@ function gameInfoPage3() {
       window.open("https://www.plu.edu/faculty-resources/wp-content/uploads/sites/311/2017/12/resources-on-white-privilege.pdf");
     }
   }
-}
-
-function gameInfoPage3MouseClicked() {
-  //returns to main level and restarts game
-  state = 'levelOne';
 }
