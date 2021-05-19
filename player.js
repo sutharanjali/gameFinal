@@ -8,9 +8,10 @@ class Player {
   }
 
   display() {
-    fill("white");
+    fill("blue");
     noStroke();
     ellipse(this.x, this.y, this.r1);
+    image(playerOneImg, this.x, this.y, this.r1, this.r1);
   }
 
   move() {

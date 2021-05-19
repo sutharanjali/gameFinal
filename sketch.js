@@ -15,6 +15,20 @@ let speed = 3;
 let player;
 let obstacles = [];
 
+let playerOneImg;
+let playerTwoImg;
+let holeImg;
+let jumpImg;
+let coinImg;
+
+function preload() {
+  playerOneImg = loadImage('assets/player1.png');
+  playerTwoImg = loadImage('assets/player2.png');
+  holeImg = loadImage('assets/hole.png');
+  jumpImg = loadImage('assets/jump.png');
+  coinImg = loadImage('assets/coin.png');
+}
+
 function setup() {
   cnv = createCanvas(600, 600);
   noStroke();
