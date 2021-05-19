@@ -1,17 +1,15 @@
 class ObstacleP1 {
   constructor() {
-    this.r2 = random(50,110);
-    this.x = random(width);
-    this.y = 0 - this.r2;
+    this.d = random(40, 80);
+    this.x = random(width / 2 - (this.d / 2));
+    this.y = 0 - this.d;
   }
 
   display() {
-    fill('red');
-    noStroke();
-    ellipse(this.x, this.y, this.r2);
+    image(holeImg, this.x, this.y, this.d, this.d);
   }
 
   move() {
-    this.y+=3;
+    this.y += 3;
   }
 }
