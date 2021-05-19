@@ -1,4 +1,4 @@
-class Obstacle {
+class ObstacleP1 {
   constructor() {
     this.r2 = random(50,110);
     this.x = random(width);
