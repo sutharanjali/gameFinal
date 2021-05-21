@@ -584,7 +584,7 @@ function gameInfoPage3() {
   textSize(15);
   fill("white");
   text("Press 'r' to restart game.", width / 2, 450);
-  
+
   if (key == 'r') {
     state = 'levelOne';
   }
